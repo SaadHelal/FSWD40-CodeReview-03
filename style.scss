@@ -1,0 +1,94 @@
+
+$font-size: 45px;
+$background-color: #38a18c;
+
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/*style for main index*/
+*{
+    margin: 0 auto;
+    padding: 0
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Chivo', sans-serif;
+}
+
+header h1 {
+    font-size: $font-size;
+    color: #e78244;
+    padding: 50px;
+    text-align: center
+}
+
+header h1 b{
+    font-weight: bold;
+    font-size: $font-size;
+}
+
+section h2 {
+   font-size: $font-size;
+    color: #2d4452;
+    padding-top: 20px
+}
+
+section {
+    text-align: center;
+    background-color: $background-color;
+}
+
+section .container {
+    display: flex;
+}
+
+section .container article {
+    padding: 20px 0;
+}
+
+section .container article img {
+    width: 80%;
+    padding: 0 40px
+}
+
+section .container article p {
+    font-size: 20px;
+    padding: 0 10px;
+    color: #fff
+}
+
+#button{
+    display: flex;
+}
+#button a{
+    margin-left: 40%;
+}
+
+a{
+    @include border-radius(45px);
+    text-decoration: none;
+    margin: 20px;
+    padding: 20px 30px;
+    font-size:30px;
+    color: #2D4452;
+    border: solid 3px #4f4f4f;
+    background-color: #DBDBDB;
+}
+
+footer {
+    background-color: $background-color;
+}
+
+footer p {
+    color: #fff;
+    padding: 10px;
+    text-align: center
+}
+@import "partial";
